@@ -38,190 +38,61 @@
 	</head>
 	<body>
 
-		<!-- Cinnamon website navigation -->
-		<nav class="navbar navbar-default navbar-cinnamon" role="navigation">
-		  <div class="container">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed navbar-btn ci-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="./">
-						<img src="images/logo.png" alt="Cinnamon logo" height="40" />
-					</a>
-		    </div>
-
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#problem">the problem</a></li>
-		        <li><a href="#solution">the solution</a></li>
-		        <li><a href="#people">the team</a></li>
-						<li>
-							<button class="navbar-btn btn btn-primary" onclick="javascript:window.location.href='mailto:linnea@cinnamon-app.com'">Contact us</button>
-						</li>
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav><!-- /.navbar -->
-
 
 		<!-- Intro section -->
 		<!-- section-with-background-img smocky -->
-		<section class="section section-info section-size-4">
-			<div class="container">
+		<section class="section section-info section-size-4 window-sized">
+			<div class="container vertically-aligned">
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2  col-md-10 col-md-offset-1  col-sm-12  text-center">
 						<div class="section-header">
-							<h1>Defeating your sugar addiction<br>with smart eating habits</h1>
-						</div>
-
-						<div class="panel">
-							<div class="panel-body">
-								<form action="#" class="form-row no-margin">
-									<div class="form-group col-sm-3">
-										<input type="text" class="form-control" placeholder="Name">
-								  </div><!--
-							 --><div class="form-group col-sm-3">
-										<input type="text" class="form-control" placeholder="Surname">
-									</div><!--
-							--><div class="form-group col-sm-4">
-								    <input type="email" class="form-control" placeholder="Email address">
-								  </div><!--
-							 --><div class="form-group col-sm-2">
-										<button class="btn btn-primary">GET THE BETA</button>
-									</div>
-								</form>
+							<div class="real-soon">
+								<img src="images/logo.png" height="50" id="logo" class="logo">
+								<img src="images/logo-soon.png" height="50" class="soon">
 							</div>
+							<style>
+							  .real-soon{position: relative;width: 275px;margin: auto;}
+								.real-soon img.soon{
+									position: absolute;
+									left: 0;
+									top: 0;
+									opacity: 0;
+								}
+
+								.real-soon img.logo{opacity:0;}
+
+								.real-soon img{
+									-webkit-transition: opacity .3s .2s ease;
+									-moz-transition: opacity .3s .2s ease;
+									-ms-transition: opacity .3s .2s ease;
+									-o-transition: opacity .3s .2s ease;
+									transition: opacity .3s .2s ease;
+								}
+
+								.real-soon:hover img{
+									opacity: 0;
+
+								}
+
+								.real-soon:hover img.soon{
+									opacity: 1;
+
+									-webkit-transition: opacity .8s .7s ease;
+									-moz-transition: opacity .8s .7s ease;
+									-ms-transition: opacity .8s .7s ease;
+									-o-transition: opacity .8s .7s ease;
+									transition: opacity .8s .7s ease;
+								}
+							</style>
+							<script>window.setTimeout(function () {
+								document.getElementById("logo").className = "";
+							}, 200)</script>
 						</div>
 					</div><!-- / .col-x -->
 				</div><!-- / .row -->
 			</div><!-- / .container -->
 
 		</section><!-- / .section -->
-
-		<!-- The problem section -->
-		<section class="section section-default section-size-3">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-lg-6 col-lg-offset-3 text-center">
-						<h2>Sugar addiction, what?</h2>
-						<p class="sergent">
-							We're talking carbohydrates here. <br>
-							Let's see how it works
-						</p>
-
-					</div>
-				</div>
-
-				<hr class="mr-cinnamon">
-
-				<div class="row">
-					<div class="col-sm-3">
-						<h4 class="knowledge-title">Carbs = Sugar</h4>
-						<p class="knowledge-description">
-							It's more complicated than that but let's keep it simple for now.
-						</p>
-					</div>
-					<div class="col-sm-3">
-						<h4 class="knowledge-title">Too much, not good</h4>
-						<p class="knowledge-description">
-							Taking too much carbs (sugars) is dangerous to us.
-						</p>
-					</div>
-					<div class="col-sm-3">
-						<h4 class="knowledge-title">The truth of our diets</h4>
-						<p class="knowledge-description">
-							Our diets usually contains lots of carbohydrates!
-						</p>
-					</div>
-					<div class="col-sm-3">
-						<h4 class="knowledge-title">You can change it</h4>
-						<p class="knowledge-description">
-							Prevent cronic conditions as diabetes and get healthy.
-						</p>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
-
-		<!-- The problem section -->
-		<section class="section section-default section-size-3">
-			<div class="container">
-
-				<div class="row margin-bottom-4">
-					<div class="col-lg-6 col-lg-offset-3 text-center">
-						<h2>Meet your new smart food diary</h2>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-3" style="margin-top:20%">
-						<p class="sergent">
-							Snap a food and send it into your diary. <br>
-							You'll get carbs count and much much more out of it.
-						</p>
-					</div>
-					<div class="col-sm-offset-1 col-sm-4">
-						<div class="phone-carousel">
-							<div class="carousel-container"></div>
-						</div>
-					</div>
-					<div class="col-sm-offset-1 col-sm-3" style="margin-top:17%">
-						<div class="knowledge-block">
-							<div class="knowledge-title">
-								Snap in seconds
-							</div>
-							<div class="knowledge-description">
-								Taking a picture of your dish takes 5 seconds. Count on it!
-							</div>
-						</div>
-
-						<div class="knowledge-block">
-							<div class="knowledge-title">
-								Get your carbs in minutes
-							</div>
-							<div class="knowledge-description">
-								The system evaluates your dish in a matter of minutes. Hang tight and ready to "Woooah!"
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</section>
-
-		<!-- The Team section -->
-		<section class="section section-default section-size-3">
-			<div class="container">
-
-				<div class="row margin-bottom-4">
-					<div class="col-lg-6 col-lg-offset-3 text-center">
-						<h2>Founding team</h2>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-4">
-						Stephanie
-					</div>
-					<div class="col-sm-4">
-						Linnea
-					</div>
-					<div class="col-sm-4">
-						Alessio
-					</div>
-				</div>
-
-			</div>
-		</section>
 
 	</body>
 </html>
