@@ -1,0 +1,122 @@
+/*Body*/
+body{
+	@include typo_brand_weak;
+	color: $base_color;
+
+	@if($navbar_fixed_top){
+		padding-top: 80px;
+	}
+}
+
+// Content sections style
+@import "components/sections";
+
+hr{
+	border-color: #FAFAFA;
+	margin-bottom: 30px;
+
+	@media (min-width: 768px){
+		margin-bottom: 50px;
+	}
+
+
+	&.half-rule {
+		width: 100px;
+		margin: 40px auto;
+	}
+
+	&.hr-inverse{
+		border-color: rgba(255,255,255, 0.5);
+	}
+
+	&.mr-cinnamon:after{
+		content: "";
+		display: block;
+
+		width: 40px; height: 40px;
+
+		background: url(../images/resources/mr-cinnamon-icon.png);
+		background-size: contain;
+
+		margin: auto;
+		margin-top: -20px;
+	}
+}
+
+
+.invisible-marker{
+	overflow: hidden; opacity: 0; height: 0; position: relative;
+
+	top: -40px;
+
+	&.marker-no-line{
+		top: -80px;
+	}
+
+	@media (min-width: 768px){
+		top: -2px;
+
+		&.disable-desktop{
+			top: 0;
+		}
+
+		&.marker-no-line{
+			top: -80px;
+		}
+	}
+
+}
+
+
+.hide-before-preload,.show-after-preload{
+	opacity: 0;
+	@include cB(transition, opacity .5s ease);
+
+	&.enter{
+		opacity: 1;
+	}
+}
+
+
+// Conditions for special screens
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  body{
+		zoom: 0.8;
+	}
+}
+
+
+@media (min-width: 1025px){
+	#iphone-computer-vision{
+		top: -239px;
+	}
+}
+
+
+
+.spoiler{
+	display: block;
+	@include cB(transition, height .5s ease);
+	overflow: hidden;
+}
+
+
+#cinnamon-main-video-demo{
+	z-index: 0;
+	position: absolute;
+	-webkit-transform: rotate(-20.4deg) scale(0.772);
+	right: 611px;
+	top: -16px;
+
+	&:after{
+		content: " ";
+		width: 1px;
+		height: 500px;
+		background: black;
+		position: absolute;
+		-webkit-transform: rotate(-20.4deg);
+	}
+}

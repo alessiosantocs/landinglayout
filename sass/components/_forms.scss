@@ -1,0 +1,51 @@
+.form-inline{
+  .form-group{
+    margin-right: 15px;
+
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
+
+.form-row{
+  @extend .row !optional;
+
+  @include media($breakpoint_sm){
+    .form-group{
+      margin-bottom: 0px;
+    }
+  }
+
+  [class^="col-"], [class*=" col-"]{
+    padding-left: 0;
+  }
+
+
+  @include media_max($breakpoint_sm){
+    [class^="col-"], [class*=" col-"]{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+}
+
+.form-control{
+	height: 40px;
+  font-size: 12px;
+  @include typo_brand_weak;
+
+  border-width: 2px;
+  border-color: $secondary_color;
+
+  box-shadow: none;
+
+  &:focus{
+    border-color: $primary_color;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $secondary_color;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $secondary_color;
+  }
+}
