@@ -69,6 +69,12 @@ p{
 		}
 	}
 
+
+
+	// Special paragraphs
+	&.thumbnail-description{
+		@extend .thumbnail-description !optional;
+	}
 }
 
 body{

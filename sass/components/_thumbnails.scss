@@ -1,27 +1,35 @@
 .thumbnail{
-  width: 80px;
-  height: 80px;
-  border: 2px solid $secondary_color;
+  border: 3px solid $secondary_color;
   box-shadow: none;
-  border-radius: 0;
-  background: #000000;
+  border-radius: 5px;
   padding: 0px;
 
-  &.thumbnail-default{
-    background: $secondary_color;
-  }
-}
-
-.section.section-info{
-  .thumbnail{
-    border-color: $primary_color;
-  }
-}
-
-.media{
-  &.team-member{
-    .pull-left{
-      margin-right: 20px;
+  &.thumbnail-team{
+    img{
+      width: 100%;
     }
   }
+}
+
+.thumbnail-title{
+  font-size: 15px;
+  color: $strong_color;
+  font-weight: bold;
+
+  @extend .margin-bottom-2;
+}
+.thumbnail-label{
+  font-size: 15px;
+  color: $strong_color;
+}
+.thumbnail-description{
+  font-size: 13px;
+  color: #AAAAAA;
+
+  @extend .margin-bottom;
+}
+
+.thumbnail-separator{
+  @extend .no-margin-top;
+  @extend .margin-bottom;
 }
