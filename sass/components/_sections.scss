@@ -7,6 +7,10 @@ section{
 		color: $base_color;
 
 		hr{border-color: $secondary_color;}
+
+		h1{
+			color: white;
+		}
 	}
 
 	&.section-info{
