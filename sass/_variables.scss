@@ -19,6 +19,7 @@ $grey_purple: 			#ad8b9f;
 $light_water_blue: 	#52b5c3;
 $dark_water_blue: 	#C9F3F9;
 $light_blue: 				#c9f3f9;
+$blue: 				      #2979ff;
 
 $yellow: 						#f8e79a;
 $dark_gold: 				#ada271;
@@ -27,21 +28,20 @@ $light_gold: 				#c6b978;
 $black: 						#474747;
 $green_gold: 				#897C46;
 
-
 $light_brown: #E5C4A9;
 
 // Color denomination
-$strong_color: $darker_green;
-$weak_color: $green;
+$strong_color: $black;
+$weak_color: $light_blue;
 
 $base_color: $black; // should be used for text
-$primary_color: $dark_green;
+$primary_color: $blue;
 $secondary_color: $weak_color;
 $success_color: $light_green;
 
 
 // Navbar
-$navbar_background_color: $secondary_color;
+$navbar_background_color: white;
 $navbar_text_color: $strong_color;
 
 // Fonts
